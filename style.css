@@ -1,0 +1,314 @@
+/* ------------------------------------------->>> Foonts Import */
+@import url("https://fonts.googleapis.com/css2?family=Overpass&family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Capriola&display=swap");
+
+/* ------------------------------------------->>> CSS Reset */
+* {
+    box-sizing: border-box;
+    list-style: none;
+    margin: 0%;
+    padding: 0%;
+    text-decoration: none;
+    color: white;
+}
+
+body {
+    background-color: black;
+    color: white;
+    overflow: hidden;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+/* ------------------------------------------->>> Text */
+.heading-1 {
+    color: red;
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    font-family: "Capriola", sans-serif;
+}
+
+.heading-2 {
+    font-size: 2rem;
+    text-transform: uppercase;
+    font-family: "Capriola", sans-serif;
+}
+
+.sub-text-1 {
+    font-size: 1rem;
+    text-transform: capitalize;
+    font-family: "Overpass", sans-serif;
+    padding-top: 12px;
+    padding-bottom: 12px;
+
+}
+
+/* ------------------------------------------->>> Button */
+.btn-1 {
+    color: white;
+    font-size: 1rem;
+    font-family: "Capriola", sans-serif;
+    text-transform: capitalize;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 10px;
+    background-size: 200% auto;
+    background-image: linear-gradient(45deg, red 0%, darkred 51%, red 100%);
+    cursor: pointer;
+    transition: 0.5s;
+    margin-right: 20px;
+}
+
+.btn-1:hover {
+    background-position: right center;
+}
+
+
+/* ------------------------------------------->>> Navbar CSS */
+.nav {
+    display: flex;
+    width: 100vw;
+    padding: 0px 8vw;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    top: 0px;
+    z-index: 5;
+}
+
+.nav .logo {
+    width: 90px;
+}
+
+.nav .nav-links a {
+    color: white;
+    font-size: 1.2rem;
+    font-family: 'Overpass', sans-serif;
+    margin: 4px 12px;
+}
+
+.nav .nav-links a:hover {
+    color: red;
+}
+
+/* --------------------------------------------------------->>> Main CSS */
+.parent-container {
+    overflow: hidden;
+    height: 100vh;
+    width: 100vw;
+}
+
+.slider-btn {
+    width: 50px;
+    height: 50px;
+    color: white;
+    font-size: 2rem;
+    position: absolute;
+    top: 46vh;
+    z-index: 6;
+    background-color: transparent;
+    border: none;
+    border-radius: 500%;
+}
+
+#slider-btn-right {
+    right: 2vw;
+}
+
+#slider-btn-left {
+    left: 2vw;
+}
+
+.slider-btn:hover {
+    background-color: rgba(255, 0, 0, 0.4);
+}
+
+.container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 40vh 30vw 25vh 8vw;
+    background-color: rgba(0, 0, 0, 0.8);
+    background-position: center;
+    background-blend-mode: overlay;
+    background-size: cover;
+    position: absolute;
+    top: 0vh;
+}
+
+#container-1 {
+    z-index: 1;
+    background-image: url(images/Welcome.jpg);
+}
+
+#container-2 {
+    background-image: url(images/gang\ of\ wassepur\ hd\ poster.jpg);
+}
+
+#container-3 {
+    background-image: url(images/oppenheimer-hd.jpg);
+}
+
+#container-4 {
+    background-image: url(images/deadpool-3.jpg);
+}
+
+/* ----------------------------------------------------> ALL THE ANIMATIONS <---------------------------------------------------------- */
+/* Animation Classes to be used By JavaScript */
+.container-animation-slide-in-forward {
+    animation: slide-in-forward 1s ease-out 0s 1 forwards;
+}
+
+.container-animation-slide-out-forward {
+    animation: slide-out-forward 1s ease-out 0s 1 forwards;
+}
+
+.container-animation-slide-in-backward {
+    animation: slide-in-backward 1s ease-out 0s 1 forwards;
+}
+
+.container-animation-slide-out-backward {
+    animation: slide-out-backward 1s ease-out 0s 1 forwards;
+}
+
+/* For Starting text Animation  */
+.first-heading-animation {
+    position: relative;
+    left: -100vw;
+    animation: slide-text 1.5s ease-out 0s 1 forwards;
+}
+
+.first-text-animation {
+    position: relative;
+    left: -100vw;
+    animation: slide-text 1.5s ease-out 1.2s 1 forwards;
+}
+
+.first-btn-animation {
+    position: relative;
+    left: -100vw;
+    animation: slide-text 1.5s ease-out 1.4s 1 forwards;
+}
+
+/* Text sliding Animation */
+@keyframes slide-text {
+    0% {
+        left: -80vw;
+    }
+
+    100% {
+        left: -0vw;
+    }
+}
+
+/* Slider Animations  */
+@keyframes slide-in-forward {
+    0% {
+        left: 95vw;
+    }
+
+    100% {
+        left: 0vw;
+    }
+}
+
+@keyframes slide-out-forward {
+    0% {
+        right: 0vw;
+    }
+
+    100% {
+        right: 95vw;
+    }
+}
+
+@keyframes slide-in-backward {
+    0% {
+        right: 95vw;
+    }
+
+    100% {
+        right: 0vw;
+    }
+}
+
+@keyframes slide-out-backward {
+    0% {
+        left: 0vw;
+    }
+
+    100% {
+        left: 95vw;
+    }
+}
+
+
+/* ------------------------------------------->>> Responsive CSS */
+@media screen and (max-width: 768px) {
+
+    /* ------------------------------------------->>> Navbar CSS */
+    .nav {
+        flex-direction: column;
+        padding: 0px 2vw;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .nav .logo {
+        width: 50px;
+    }
+
+    .nav .nav-links {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    /* ------------------------------------------->>> Text */
+    .heading-1 {
+        font-size: 2rem;
+        text-align: center;
+    }
+
+    .heading-2 {
+        font-size: 1.2rem;
+        text-align: center;
+    }
+
+    .sub-text-1 {
+        font-size: 0.8rem;
+        padding-top: 12px;
+        padding-bottom: 12px;
+        text-align: center;
+
+    }
+
+    /* ------------------------------------------->>> Button */
+    .btn {
+        text-align: center;
+    }
+
+    .btn-1 {
+        font-size: 0.8rem;
+        padding: 7px 10px;
+        border-radius: 6px;
+        margin-right: 6px;
+        margin-top: 2px;
+    }
+
+    /* --------------------------------------------------------->>> Main CSS */
+    .slider-btn {
+        width: 35px;
+        height: 35px;
+        font-size: 1.2rem;
+    }
+
+    .container {
+        padding: 36vh 10vw 16vh 10vw;
+        align-items: center;
+    }
+}
