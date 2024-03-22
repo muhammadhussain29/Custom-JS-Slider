@@ -10,6 +10,7 @@
     padding: 0%;
     text-decoration: none;
     color: white;
+    overflow: hidden;
 }
 
 body {
@@ -21,6 +22,7 @@ body {
 ::-webkit-scrollbar {
     display: none;
 }
+
 
 /* ------------------------------------------->>> Text */
 .heading-1 {
@@ -140,8 +142,9 @@ body {
     background-position: center;
     background-blend-mode: overlay;
     background-size: cover;
-    position: absolute;
+    position: fixed;
     top: 0vh;
+    overflow: hidden;
 }
 
 #container-1 {
@@ -201,7 +204,7 @@ body {
 /* Text sliding Animation */
 @keyframes slide-text {
     0% {
-        left: -80vw;
+        left: -100vw;
     }
 
     100% {
@@ -212,7 +215,7 @@ body {
 /* Slider Animations  */
 @keyframes slide-in-forward {
     0% {
-        left: 95vw;
+        left: 100vw;
     }
 
     100% {
@@ -226,13 +229,13 @@ body {
     }
 
     100% {
-        right: 95vw;
+        right: 100vw;
     }
 }
 
 @keyframes slide-in-backward {
     0% {
-        right: 95vw;
+        right: 100vw;
     }
 
     100% {
@@ -246,7 +249,7 @@ body {
     }
 
     100% {
-        left: 95vw;
+        left: 100vw;
     }
 }
 
@@ -263,7 +266,7 @@ body {
     }
 
     .nav .logo {
-        font-size: 1.8px;
+        font-size: 1.8rem;
     }
 
     .nav .nav-links {
